@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Rails Devise Pundit" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails Devise Pundit" %>">
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "PhracTrack" %>">
+    
+    <title><%= content_for?(:title) ? yield(:title) : "PhracTrack" %></title>
+    
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+
   </head>
+
   <body>
-    <header>
-      <%= render 'layouts/navigation' %>
-    </header>
-    <main role="main">
-       <%= render 'layouts/messages' %>
-       <%= yield %>
-    </main>
+      
+    <%= render 'layouts/navigation' %>
+    
+    <%= render 'layouts/messages' %>
+    <%= yield %>
+    
   </body>
 </html>
+
+
+
+
+
+
+
+
+
